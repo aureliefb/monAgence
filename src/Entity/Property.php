@@ -8,7 +8,11 @@ use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\String\Slugger\SluggerInterface;
 use Cocur\Slugify\Slugify;
 
+//use ApiPlatform\Metadata\ApiResource;
+use ApiPlatform\Core\Annotation\ApiResource;
+
 #[ORM\Entity(repositoryClass: PropertyRepository::class)]
+#[ApiResource]
 class Property
 {
     const HEAT = [
